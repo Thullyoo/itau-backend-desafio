@@ -15,4 +15,31 @@ public class Transacao {
     private Double valor;
 
     private OffsetDateTime dataHora;
+
+    public Transacao() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Double getValor() {
+        return valor;
+    }
+
+    public void setValor(Double valor) {
+        this.valor = valor;
+    }
+
+    public OffsetDateTime getDataHora() {
+        return dataHora;
+    }
+
+    public void setDataHora(OffsetDateTime dataHora) {
+        this.dataHora = dataHora;
+    }
 }
