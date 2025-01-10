@@ -4,6 +4,7 @@ import br.thullyoo.itau_backend_desafio.DTO.TransacaoRequest;
 import br.thullyoo.itau_backend_desafio.service.TransacaoService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -30,4 +31,9 @@ public class TransacaoController {
 
     }
 
+    @DeleteMapping(value = "/transacao")
+    public ResponseEntity<Void> deletarTransacoes(){
+        transacaoService.deletarTransacoes();
+        return ResponseEntity.ok(null);
+    }
 }
