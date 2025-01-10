@@ -28,6 +28,10 @@ public class TransacaoService {
         transacaoRepository.save(transacao);
     }
 
+    public void deletarTransacoes(){
+        transacaoRepository.deleteAll();
+    }
+
     private void validarTransacao(TransacaoRequest transacaoRequest){
         if (transacaoRequest.dataHora().isAfter(OffsetDateTime.now())){
             throw new IllegalArgumentException("Data não pode ser no futuro");
