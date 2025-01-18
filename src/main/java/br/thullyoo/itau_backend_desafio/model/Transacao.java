@@ -19,6 +19,12 @@ public class Transacao {
     public Transacao() {
     }
 
+    public Transacao(Long id, Double valor, OffsetDateTime dataHora) {
+        this.id = id;
+        this.valor = valor;
+        this.dataHora = dataHora;
+    }
+
     public Long getId() {
         return id;
     }
